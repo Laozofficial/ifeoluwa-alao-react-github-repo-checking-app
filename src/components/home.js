@@ -61,7 +61,7 @@ const Home = () => {
                             <div className = "card-header" >
                                 <div className='row'>
                                     <div className='col-md-6'>
-                                        {repository.name}
+                                        <img src={repository.owner.avatar_url} alt={repository.name} style={{height: 30, borderRadius: 30}}/> {repository.name}
                                     </div>
                                     <div className='col-md-6 text-right'>
                                         <a href={repository.url}>Visit Repository</a>
@@ -72,6 +72,9 @@ const Home = () => {
                                 <p><span className='text-primary'>Description: -</span> {repository.description}</p>
                                 <p><span className='text-primary'>File Size: -</span> {repository.size / 1000} MB</p>
                                 <p><span className='text-primary'>Visibility: -</span> { repository.visibility}</p>
+                            </div>
+                            <div className='card-footer'>
+                                <p><span className='text-primary'>Created At: -</span> { repository.created_at}</p>
                             </div>
                         </div>
                     )
