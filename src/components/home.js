@@ -75,7 +75,7 @@ const Home = () => {
                                 <p><span className='text-primary'>Visibility: -</span> { repository.visibility}</p>
                             </div>
                             <div className='card-footer'>
-                                <p><span className='text-primary'>Created At: -</span> {moment(repository.created_at, 'lll')}</p>
+                                <p><span className='text-primary'>Created At: -</span> { repository.created_at}</p>
                             </div>
                         </div>
                     )
