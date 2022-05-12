@@ -1,6 +1,7 @@
 import NavBar from './nav';
 import React from 'react';
 import axios from 'axios';
+import moment from 'moment';
 
 
 const Home = () => {
@@ -61,7 +62,7 @@ const Home = () => {
                             <div className = "card-header" >
                                 <div className='row'>
                                     <div className='col-md-6'>
-                                        <img src={repository.owner.avatar_url} alt={repository.name} style={{height: 30, borderRadius: 30}}/> {repository.name}
+                                        <img className='mr-3' src={repository.owner.avatar_url} alt={repository.name} style={{height: 30, borderRadius: 30}}/> {repository.name}
                                     </div>
                                     <div className='col-md-6 text-right'>
                                         <a href={repository.url}>Visit Repository</a>
@@ -74,7 +75,7 @@ const Home = () => {
                                 <p><span className='text-primary'>Visibility: -</span> { repository.visibility}</p>
                             </div>
                             <div className='card-footer'>
-                                <p><span className='text-primary'>Created At: -</span> { repository.created_at}</p>
+                                <p><span className='text-primary'>Created At: -</span> {moment(repository.created_at, 'lll')}</p>
                             </div>
                         </div>
                     )

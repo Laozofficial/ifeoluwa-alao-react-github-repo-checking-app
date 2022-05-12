@@ -8,9 +8,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This is an app written by Ifeoluwa Alao Ojo
+          <br />
+          <br />
+          Phone Number : +2349098311785
+          <br />
+          <br />
+          Email  : Laozofficial@gmail.com
         </p>
-        <Link to="/home">Home</Link>
+        <Link to="/home">Proceed to Get All Repos</Link>
       </header>
     </div>
   );
